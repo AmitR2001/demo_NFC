@@ -30,55 +30,17 @@ document.getElementById('writeButton').addEventListener('click', async () => {
     const insurancePolicy = document.getElementById('insurancePolicy').value;
 
     const message = `
-        Basic Patient Information
-        FullName: ${fullName}
-        Age: ${age}
-        Gender: ${gender}
-        BloodType: ${bloodType}
-
-        Allergies
-        Drug: ${drugAllergies}
-        Food: ${foodAllergies}
-        Environmental: ${environmentalAllergies}
-
-        Chronic Conditions
-        Diabetes: ${diabetes}
-        Hypertension: ${hypertension}
-        Asthma: ${asthma}
-        Heart Disease: ${heartDisease}
-        Kidney Disease: ${kidneyDisease}
-
-        Medications
-        Current: ${currentMedications}
-        Changes: ${medicationChanges}
-
-        Past Medical History
-        Surgeries: ${surgeries}
-        Illnesses: ${illnesses}
-
-        Emergency Contact
-        Name: ${emergencyContactName}
-        Relationship: ${emergencyContactRelationship}
-        Phone: ${emergencyContactPhone}
-
-        Immunization Records
-        Tetanus: ${tetanus}
-        COVID-19: ${covid19}
-        Other: ${otherImmunizations}
-
-        Lifestyle Factors (Optional)
-        Smoker: ${smoker}
-        Alcohol: ${alcohol}
-        Dietary Restrictions: ${dietaryRestrictions}
-
-        Physician Details
-        Name: ${physicianName}
-        Contact: ${physicianContact}
-
-        Insurance Information
-        Provider: ${insuranceProvider}
-        Policy: ${insurancePolicy}
-    `;
+        1.PI|FN:${fullName}|A:${age}|G:${gender}|BT:${bloodType}
+        2.AL|D:${drugAllergies}|F:${foodAllergies}|E:${environmentalAllergies}
+        3.CC|D:${diabetes}|H:${hypertension}|A:${asthma}|HD:${heartDisease}|KD:${kidneyDisease}
+        4.MED|C:${currentMedications}|CH:${medicationChanges}
+        5.PMH|S:${surgeries}|I:${illnesses}
+        6.EC|N:${emergencyContactName}|R:${emergencyContactRelationship}|P:${emergencyContactPhone}
+        7.IMM|T:${tetanus}|C:${covid19}|O:${otherImmunizations}
+        8.LF|S:${smoker}|A:${alcohol}|DR:${dietaryRestrictions}
+        9.PHY|N:${physicianName}|C:${physicianContact}
+        10.INS|P:${insuranceProvider}|PN:${insurancePolicy}
+    `.trim();
 
     if ('NDEFReader' in window) {
         try {
